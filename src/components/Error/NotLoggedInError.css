@@ -1,0 +1,16 @@
+.errorPageContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.errorPageContainer h1{
+    transform: translateY(-50%);
+    color: white; 
+    font-size: 3rem; 
+    text-shadow: -2px 2px 0 #f00, 
+                    2px 2px 0 #f00, 
+                    2px -2px 0 #f00, 
+                    -2px -2px 0 #f00; 
+}

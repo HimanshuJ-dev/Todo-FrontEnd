@@ -1,0 +1,81 @@
+.navigationContainer{
+    position: sticky;
+    display: flex;
+    height: 70px;
+    width: 100%;
+    box-shadow: 3px 3px 10px #4f4f4f;
+    background: white;
+    z-index: 1;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+}
+
+.logoContainer{
+    margin-left: 20px;
+}
+
+.navlink{
+    margin-right: 25px;
+}
+
+.signOutButton{
+    padding: 7px 15px;
+    border: 2px solid blue;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 20px;
+    background: white;
+    cursor: pointer;
+    transition: 0.3s;
+    color: blue;
+}
+
+.signOutButton:hover{
+    transform: scale(1.1);
+    background: blue;
+    color: white;
+}
+
+.signOutButton:active{
+    transform: scale(1);
+    background: white;
+    color: blue;
+}
+
+.pageLinks{
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 900;
+    transition: 0.3s;
+}
+
+.pageLinks:hover{
+    font-size: 1.2rem;
+    color: blue;
+}
+
+.pageLinks:active{
+    font-size: 1.1rem;
+}
+
+.loadingScreenContainer{
+    font-size: 1.1rem;
+    font-weight: 700;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loadingScreenContainer h1{
+    transform: translateY(-50%);
+    color: white; 
+    font-size: 3rem; 
+    text-shadow: -2px 2px 0 #f00, 
+                    2px 2px 0 #f00, 
+                    2px -2px 0 #f00, 
+                    -2px -2px 0 #f00;
+}

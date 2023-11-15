@@ -1,0 +1,27 @@
+.homeContainer{
+    height: 100vh;
+    width: 100%;
+    /* background: linear-gradient(100deg, rgb(0, 71, 251) 50%, #ffffff 50%); */
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.homeFirstDivImageContainer{
+    height: auto;
+}
+
+.homeFirstDivTextContainer{
+    text-align: center;
+}
+
+.homeFirstDivTextContainer h1{
+    color: rgb(130, 130, 255);
+    font-size: 5rem;
+    margin-bottom: 0;
+}
+
+.homeFirstDivTextContainer h2{
+    font-size: 1.3rem;
+}

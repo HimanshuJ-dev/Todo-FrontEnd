@@ -1,0 +1,243 @@
+.taskListContainer{
+    display: block;
+    background: rgb(211, 248, 255);
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.taskListPageTitle{
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.noTasksBanner{
+    width: 100%;
+    text-align: center;
+    height: auto;
+}
+
+.noTasksBanner h1{
+    margin-top: 100px;
+    color: rgb(93, 93, 93);
+}
+
+.singleTaskContainer{
+    background: rgb(255, 255, 255);
+    max-width: 1000px;
+    margin: 20px auto;
+    border: 3px solid rgb(255, 117, 24, 1);
+    padding: 0;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px gray;
+    transition: all .2s ease-in-out; 
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.linkMaker{
+    text-decoration: none;
+    color: inherit;
+}
+
+.singleTaskContainer:hover{
+    transform: scale(1.03);
+}
+
+.singleTaskContainer:active{
+    transform: scale(1);
+}
+
+.singleTaskIdAndTitleCont{
+    display: flex;
+    margin: 0;
+}
+
+.singleTaskId{
+    width: 100px;
+    height: 50px;
+    margin: 0;
+    text-align: center;
+    background: linear-gradient(to right, rgb(255, 117, 24, 1), rgb(255, 117, 24, 0));
+}
+
+.singleTaskId h1{
+    position: relative;
+    margin: auto;
+    top: 20%;
+    transform: translateY(-50%);
+    transform: rotate(-30deg);
+    color: white; 
+    font-size: 1.8rem; 
+    text-shadow: -1px 1px 0 #000, 
+                    1px 1px 0 #000, 
+                    1px -1px 0 #000, 
+                    -1px -1px 0 #000; 
+}
+
+.singleTaskTitle{
+    width: auto;
+    height: 50px;
+    margin: 0;
+    margin-left: 20px;
+}
+
+.singleTaskTitle h1{
+    position: relative;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.singleTaskBreakLine{
+    height: 2px;
+    background: linear-gradient(to right, rgb(255, 117, 24, 1), rgb(255, 117, 24, 0));
+}
+
+.singleTaskDescription{
+    width: 100%;
+    height: auto;
+}
+
+.singleTaskDescription h5{
+    font-size: 1.2rem;
+    margin: 5px;
+}
+
+.singleTaskPriority h4{
+    margin: 10px 5px;
+}
+
+.singleTaskReciever{
+    width: 100%;
+    height: auto;
+}
+
+.singleTaskReciever h4{
+    margin: 10px 5px;
+}
+
+.singleTaskContainer.normal{
+    border: 3px solid rgb(53, 50, 255);
+}
+
+.singleTaskId.normal{
+    background: linear-gradient(to right, rgb(53, 50, 255), rgb(255, 117, 24, 0));
+}
+
+.singleTaskBreakLine.normal{
+    background: linear-gradient(to right, rgb(53, 50, 255), rgb(255, 117, 24, 0));
+}
+
+.singleTaskPriority.normal{
+    color: rgb(53, 50, 255);
+}
+
+.singleTaskContainer.high{
+    border: 3px solid orange;
+}
+
+.singleTaskId.high{
+    background: linear-gradient(to right, orange, rgb(255, 117, 24, 0));
+}
+
+.singleTaskBreakLine.high{
+    background: linear-gradient(to right, orange, rgb(255, 117, 24, 0));
+}
+
+.singleTaskPriority.high{
+    color: orange;
+}
+
+.singleTaskContainer.urgent{
+    border: 3px solid red;
+}
+
+.singleTaskId.urgent{
+    background: linear-gradient(to right, red, rgb(255, 117, 24, 0));
+}
+
+.singleTaskBreakLine.urgent{
+    background: linear-gradient(to right, red, rgb(255, 117, 24, 0));
+}
+
+.singleTaskPriority.urgent{
+    color: red;
+}
+
+.singleTaskContainer.completed{
+    border: 3px solid rgb(18, 255, 18);
+}
+
+.singleTaskId.completed{
+    background: linear-gradient(to right, rgb(18, 255, 18), rgb(255, 117, 24, 0));
+}
+
+.singleTaskBreakLine.completed{
+    background: linear-gradient(to right, rgb(18, 255, 18), rgb(255, 117, 24, 0));
+}
+
+.singleTaskPriority.completed{
+    color: rgb(18, 255, 18);
+}
+
+.singleTaskContainer.cancelled{
+    border: 3px solid gray;
+}
+
+.singleTaskId.cancelled{
+    background: linear-gradient(to right, gray, rgb(255, 117, 24, 0));
+}
+
+.singleTaskBreakLine.cancelled{
+    background: linear-gradient(to right, gray, rgb(255, 117, 24, 0));
+}
+
+.singleTaskPriority.cancelled{
+    color: gray;
+}
+
+.actionButtonsContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.actionButton{
+    margin: 10px;
+    padding: 10px 20px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.importedIcon{
+    transform: scale(1.6);
+}
+
+.deleteIcon{
+    border: 2px solid orange;
+    color: orange;
+}
+
+.completedIcon{
+    border: 2px solid rgb(18, 255, 18);
+    color: rgb(18, 255, 18);
+}
+
+.cancelledIcon{
+    border: 2px solid red;
+    color: red;
+}
+
+.actionButton:hover{
+    transform: scale(1.1);
+}
+
+.actionButton:active{
+    transform: scale(1);
+}

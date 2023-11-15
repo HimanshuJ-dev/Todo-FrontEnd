@@ -1,0 +1,127 @@
+.newTaskContainer{
+    background: skyblue;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newTaskCard{
+    width: 60%;
+    max-width: 1000px;
+    margin: auto;
+    justify-content: center;
+    background: white;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    border: 1px solid rgb(87, 87, 87);
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px rgb(87, 87, 87);
+}
+
+.newTaskForm{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.newTaskFormInputContainer{
+    width: 80%;
+}
+
+.newTaskForm input{
+    width: 90%;
+    padding: 20px;
+    border-radius: 30px;
+    border: 1px solid rgb(87, 87, 87);
+    background: #ffffff;
+    margin: 10px 0;
+    font-size: 1.3em;
+}
+
+.newTaskForm input:focus{
+    outline: 0;
+    box-shadow: 3px 3px 5px rgb(87, 87, 87);
+}
+
+.newTaskForm select{
+    width: 95%;
+    padding: 20px;
+    border-radius: 30px;
+    border: 1px solid rgb(87, 87, 87);
+    background: #ffffff;
+    margin: 10px 0;
+    font-size: 1.3em;
+}
+
+.newTaskForm select:focus{
+    outline: 0;
+    box-shadow: 3px 3px 5px rgb(87, 87, 87);
+}
+
+.newTaskForm textarea{
+    width: 90%;
+    padding: 20px;
+    border-radius: 30px;
+    border: 1px solid rgb(87, 87, 87);
+    background: #ffffff;
+    margin: 10px 0;
+    font-size: 1.3em;
+}
+
+.newTaskForm textarea:focus{
+    outline: 0;
+    box-shadow: 3px 3px 5px rgb(87, 87, 87);
+}
+
+.newTaskForm button{
+    height: 70px;
+    margin-top: 30px;
+    width: 60%;
+    border: 4px solid red;
+    border-radius: 40px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    transition: 0.3s;
+    color: red;
+    font-weight: 700;
+    background:white;
+}
+
+.newTaskForm button:hover{
+    transform: scale(1.1);
+    background: red;
+    color: white;
+}
+
+.newTaskForm button:active{
+    transform: scale(1);
+}
+
+.deleteTaskButton button{
+    height: 70px;
+    margin-top: 30px;
+    width: 50%;
+    border: 4px solid red;
+    border-radius: 40px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    transition: 0.3s;
+    color: red;
+    font-weight: 700;
+    background: white;
+}
+
+.deleteTaskButton button:hover{
+    transform: scale(1.1);
+    background: red;
+    color: white;
+}
+
+.deleteTaskButton button:active{
+    transform: scale(1);
+}
