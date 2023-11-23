@@ -1,12 +1,13 @@
 import { useDispatch, useSelector } from "react-redux";
-import { deleteTaskFetch, markAssignedTaskCancelledFetch, markAssignedTaskCompletedFetch, recievedTasksFetch } from "../../sagas/actions";
+import { deleteTaskFetch } from "../../sagas/tasksReducer/tasksReducerActions";
+import { markAssignedTaskCancelledFetch, markAssignedTaskCompletedFetch, recievedTasksFetch } from "../../sagas/assignedTasksReducer/assignedTasksReducerActions";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const RecievedTasks = () => {
   const dispatch = useDispatch();
-  const currentUser = useSelector((state) => state.signInReducer.currentUser);
-  const tasks = useSelector((state) => state.recievedTasksReducer.tasks);
+  const currentUser = useSelector((state) => state.user.currentUser);
+  const tasks = useSelector((state) => state.recievedTasks.tasks);
 
   useEffect(() => {
     dispatch(recievedTasksFetch(currentUser));

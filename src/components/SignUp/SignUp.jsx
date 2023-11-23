@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./SignUp.css";
 import { useDispatch } from "react-redux";
-import { createUserFetch } from "../../sagas/actions";
+import { createUserFetch } from "../../sagas/userReducer/userReducerActions";
 import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {

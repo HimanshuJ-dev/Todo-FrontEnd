@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { assignTaskFetch } from "../../sagas/actions";
+import { assignTaskFetch } from "../../sagas/assignedTasksReducer/assignedTasksReducerActions";
 
 const AssignTask = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const currentUser = useSelector((state) => state.signInReducer.currentUser);
+  const currentUser = useSelector((state) => state.user.currentUser);
   const taskCreated = useSelector(
-    (state) => state.assignedTasksReducer.taskCreated
+    (state) => state.assignedTasks.taskCreated
   );
 
   const [recieverEmail, setRecieverEmail] = useState("");

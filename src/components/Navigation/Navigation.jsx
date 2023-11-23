@@ -2,14 +2,15 @@ import { Outlet, useNavigate, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { Fragment } from "react";
 
-import './Navigation.css'
-import { signOutUser } from "../../sagas/actions";
+import './Navigation.css';
+import { signOutUser } from "../../sagas/userReducer/userReducerActions";
 
 const Navigation = () => {
     const dispatch = useDispatch();
-    const currentUser = useSelector(state => state.signInReducer.currentUser);
-  const isLoadingUser = useSelector(state => state.signInReducer.isLoading);
-    const navigate = useNavigate();
+    const currentUser = useSelector(state => state.user.currentUser);
+  const isLoadingUser = useSelector(state => state.user.isLoading);
+  const navigate = useNavigate();
+  const username = useSelector(state => state.user.username);
 
     const signOutHandler = () => {
         console.log('sign out');
@@ -24,6 +25,7 @@ const Navigation = () => {
             <Link to="/">
               <img src="./logo512.png" alt="not yet" height="50px" />
             </Link>
+            <Link className="navlink pageLinks usernameNavigation">{username}</Link>
           </div>
           <div className="navLinkContainer">
             {currentUser ? (
@@ -43,6 +45,7 @@ const Navigation = () => {
                 <Link className="navlink pageLinks" to="/recieved-tasks">
                   Recieved Tasks
                 </Link>
+
                 <button
                   className="navlink signOutButton"
                   onClick={signOutHandler}

@@ -13,6 +13,12 @@
 
 .logoContainer{
     margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.usernameNavigation{
+    margin-left: 20px;
 }
 
 .navlink{

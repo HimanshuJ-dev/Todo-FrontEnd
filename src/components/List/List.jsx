@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { deleteTaskFetch, getTasksFetch, markTaskCancelledFetch, markTaskCompletedFetch } from "../../sagas/actions";
+import { deleteTaskFetch, getTasksFetch, markTaskCancelledFetch, markTaskCompletedFetch } from "../../sagas/tasksReducer/tasksReducerActions";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import './List.css'
@@ -7,8 +7,8 @@ import './List.css'
 const List = () => {
 
     const dispatch = useDispatch()
-    const currentUser = useSelector((state) => state.signInReducer.currentUser);
-    const tasks = useSelector((state) => state.tasksReducer.tasks);
+    const currentUser = useSelector((state) => state.user.currentUser);
+    const tasks = useSelector((state) => state.tasks.tasks);
 
     useEffect(() => {
         dispatch(getTasksFetch(currentUser));

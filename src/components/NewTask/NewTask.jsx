@@ -2,14 +2,14 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import './NewTask.css';
-import { createTaskFetch } from "../../sagas/actions";
+import { createTaskFetch } from "../../sagas/tasksReducer/tasksReducerActions";
 
 const NewTask = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     
-    const currentUser = useSelector((state) => state.signInReducer.currentUser);
-    const taskCreated = useSelector((state) => state.tasksReducer.taskCreated);
+    const currentUser = useSelector((state) => state.user.currentUser);
+    const taskCreated = useSelector((state) => state.tasks.taskCreated);
 
   const [taskName, setTaskName] = useState("");
   const [description, setDescription] = useState("");

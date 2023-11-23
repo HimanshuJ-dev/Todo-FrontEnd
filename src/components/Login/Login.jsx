@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { getUsersFetch } from "../../sagas/actions";
+import { getUsersFetch } from '../../sagas/userReducer/userReducerActions';
 import "./Login.css";
 import { useNavigate } from "react-router-dom";
 

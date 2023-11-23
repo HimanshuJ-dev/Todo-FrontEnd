@@ -17,43 +17,38 @@ import EditAssignedTask from './components/EditAssignedTask/EditAssignedTask.jsx
 
 function App() {
 
-  const currentUser = useSelector((state) => state.signInReducer.currentUser);
+  const currentUser = useSelector((state) => state.user.currentUser);
 
   return (
     <div>
       <Navigation />
       <Routes>
         <Route index element={<Home />} />
-        <Route
+        {currentUser ? (<Route>
+          <Route
           path="tasks/*"
-          element={currentUser !== null ? <List /> : <NotLoggedIn />}
-        />
+          element={ <List /> }/>
         <Route
           path="assign-task/*"
-          element={currentUser !== null ? <AssignTask /> : <NotLoggedIn />}
-        />
+          element={ <AssignTask /> }/>
         <Route
           path="assigned-tasks/*"
-          element={currentUser !== null ? <AssignedTasks /> : <NotLoggedIn />}
-        />
+          element={ <AssignedTasks /> }/>
         <Route
           path="recieved-tasks/*"
-          element={currentUser !== null ? <RecievedTasks /> : <NotLoggedIn />}
-        />
+          element={ <RecievedTasks /> }/>
         <Route
           path="new-task"
-          element={currentUser !== null ? <NewTask /> : <NotLoggedIn />}
-        />
+          element={ <NewTask /> }/>
         <Route
           path="edit-task"
-          element={currentUser !== null ? <EditTask /> : <NotLoggedIn />}
-        />
+          element={ <EditTask /> }/>
         <Route
           path="edit-assigned-task"
-          element={
-            currentUser !== null ? <EditAssignedTask /> : <NotLoggedIn />
-          }
-        />
+          element={<EditAssignedTask /> }
+          /></Route>) : (<Route>
+            <Route path='/*' element={ <NotLoggedIn /> } />
+          </Route>)}
         <Route
           path="signup"
           element={currentUser === null ? <SignUp /> : <List />}
